@@ -46,3 +46,4 @@ class lista:
         self.__cantidad -= 1
         return eliminado
 
+
