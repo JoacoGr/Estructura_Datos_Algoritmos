@@ -1,7 +1,7 @@
 from Nodo import nodo
 class lista:
-    __cantidad: int
     __cabeza: nodo
+    __cantidad: int
 
     def __init__(self):
         self.__cabeza = None

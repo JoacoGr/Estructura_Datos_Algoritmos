@@ -99,6 +99,6 @@ if __name__ == '__main__':
     lista1.insertar(1,1)
     lista1.insertar(3,2)
     lista1.insertar(5,3)
-    lista1.insertar(4,2)
+    lista1.insertar(4,4)
     lista1.suprimir(2)
     lista1.recorrer()
