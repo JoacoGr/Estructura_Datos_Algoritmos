@@ -5,8 +5,8 @@ class Lista:
     __cantidad: int
     __items: np.ndarray
 
-    def __init__(self, dimension: int = 10):
-        self.__dimension = dimension
+    def __init__(self, dim):
+        self.__dimension = dim
         self.__cantidad = 0
         self.__items = np.empty(self.__dimension, dtype=object)
 
@@ -14,21 +14,18 @@ class Lista:
         return (self.__cantidad == 0)
 
     def insertar(self, otro, p):
-        if p < 1 or p > self.__cantidad + 1:
+        if self.__dimension == self.__cantidad:
+            print("No hay lugar diferente")
+            return
+        if p < 1 or p > self.__dimension:
             print("Error: Posición inválida para inserción")
             return False
 
-        if self.__cantidad == self.__dimension:
-            self.__dimension += 5
-            self.__items.resize(self.__dimension, refcheck=False)
-
         indice_fisico = p - 1
-
         i = self.__cantidad
         while i > indice_fisico:
             self.__items[i] = self.__items[i - 1]
             i -= 1
-
         self.__items[indice_fisico] = otro
         self.__cantidad += 1
         return True
@@ -39,7 +36,7 @@ class Lista:
             return None
 
         posicion = p - 1
-        eliminado = self.__item[posicion]
+        eliminado = self.__items[posicion]
 
         for i in range(posicion, self.__cantidad-1):
             self.__items[i] = self.__items[i+1]
@@ -94,3 +91,14 @@ class Lista:
     def recorrer(self):
         for i in range(self.__cantidad):
             print(f"[{i + 1}] -> {self.__items[i]}")
+
+
+if __name__ == '__main__':
+    lista1 = Lista(10)
+    lista1.recorrer()
+    lista1.insertar(1,1)
+    lista1.insertar(3,2)
+    lista1.insertar(5,3)
+    lista1.insertar(4,2)
+    lista1.suprimir(2)
+    lista1.recorrer()
