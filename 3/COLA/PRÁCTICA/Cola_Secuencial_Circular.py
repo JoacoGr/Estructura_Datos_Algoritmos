@@ -8,7 +8,7 @@ class cola:
 
     def __init__(self):
         self.__dimension = 5
-        self.__lista= np.empty(self.__dimension, dtype='int')
+        self.__lista= np.empty(self.__dimension, dtype=int)
         self.__inicio= 0
         self.__ultimo= 0
         self.__cant = 0

@@ -9,7 +9,6 @@ class pila:
 
     def agregar(self, otro):
         Nodo = nodo(otro)
-        Nodo.set_item(otro)
         Nodo.set_sig(self.__cabeza)
         self.__cabeza = Nodo
         self.__cant += 1

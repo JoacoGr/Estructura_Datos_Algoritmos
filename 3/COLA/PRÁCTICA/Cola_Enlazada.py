@@ -25,7 +25,7 @@ class cola:
     def suprimir(self):
         if (self.vacio()):
             print("Se halla vacia")
-            retorna = 0
+            retorna = None
         else: 
             x = self.__inicio.get_item()
             self.__inicio = self.__inicio.get_sig()

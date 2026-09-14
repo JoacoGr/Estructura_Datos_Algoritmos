@@ -4,8 +4,8 @@ class pila:
     __tope: int
     __pila: np.ndarray
     
-    def __init__(self, cant):
-        self.__cant = cant
+    def __init__(self):
+        self.__cant = 3
         self.__tope = -1
         self.__pila = np.empty(self.__cant, dtype = int)
         
@@ -20,7 +20,9 @@ class pila:
             self.__tope += 1
             self.__pila[self.__tope] = x
             aux = x
-        else: aux = 0
+        else: 
+            print("Espacio insuficiente")
+            aux = 0
         return aux
     
     def suprimir(self):
@@ -67,3 +69,8 @@ if __name__ == '__main__':
     if pila1.vacio():
         print("Está vacia")
     else: print("No está vacia")
+    pila1.insertar(x = 55)
+    pila1.insertar(x = 66)
+    pila1.insertar(x = 77)
+    pila1.insertar(x = 55)
+    pila1.mostrar()
