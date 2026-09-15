@@ -44,3 +44,12 @@ class cola:
           i = (i + 1) % self.__dimension
 
 
+if __name__=='__main__':
+    cola1 = cola()
+    cola1.insertar(1)
+    cola1.insertar(2)
+    cola1.insertar(3)
+    cola1.recorrer()
+    print("---------")
+    cola1.suprimir()
+    cola1.recorrer()

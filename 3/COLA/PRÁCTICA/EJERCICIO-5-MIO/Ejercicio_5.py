@@ -55,10 +55,5 @@ def eje_5():
     else: print('No se completó ningun trabajo')
 
 
-
-        
-
-
-
 if __name__ == '__main__':
     eje_5()
