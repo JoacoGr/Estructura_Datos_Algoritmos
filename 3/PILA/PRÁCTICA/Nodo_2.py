@@ -1,6 +1,6 @@
 class nodo:
     __item: object
-    __sig: None
+    __sig: object
 
     def __init__(self, otro):
         self.__item = otro

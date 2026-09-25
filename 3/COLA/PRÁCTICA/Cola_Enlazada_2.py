@@ -14,7 +14,7 @@ class cola:
 
     def insertar(self, x):
         Nodo = nodo(x)
-        if self.__vacio():
+        if self.vacio():
             self.__cabeza = Nodo
         else:
             self.__ultimo.set_sig(Nodo)
