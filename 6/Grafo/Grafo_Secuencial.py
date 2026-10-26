@@ -16,11 +16,11 @@ class GrafoMatriz:
 
     def adyacentes(self, u):
         """Determina los nodos adyacentes de u."""
-        ady = []
+        lista = []
         for v in range(1, self.__num_vertices + 1):
             if self.__A[u, v] == 1:
-                ady.append(v)
-        return ady
+                lista.append(v)
+        return lista
 
     def bea(self, s):
         """Procesa todos los elementos en anchura."""
